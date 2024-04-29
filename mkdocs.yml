@@ -1,0 +1,10 @@
+site_name: Scratch works and Scratch works
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+plugins:
+  - blog
+nav:
+  - index.md
+  - Blog:
+    - blog/index.md
