@@ -996,7 +996,7 @@
 <p>包含语句和特殊命名过的 client:renderTab 对应上述的二级字符串。简单来说：第一串字母和第一个<code>-</code>（随便你用什么，我喜欢用短横线）标识了第一级字符串；后序的每串字母由<code>-</code>隔开，分别作为第二级（不分前后）。</p>
 <p>二级字符串判断时需要判断包含 &lt;-name-&gt;，即两侧均需要输入短横线，name是你设置的状态。<br />
 这同时意味着我们需要复杂化第一级字符串避免出现 <code>adGui</code> 和 <code>breadGui</code> 这样后者包含前者的情况，但我相信利大于弊。</p>
-<p>需要指出的是，我们声明了 client:hasRenderFinished? 用于标识当前的状态（主要提供给M）；而GUI:result 用于向 M 提供状态。（由于 U 一定存在于本体，而 M 不一定，我们必须使用全局变量表示他们，<a href="">详情见此</a>）  </p>
+<p>需要指出的是，我们声明了 client:hasRenderFinished? 用于标识当前的状态（主要提供给M）；而GUI:result 用于向 M 提供状态。（由于 U 一定存在于本体，而 M 不一定，我们必须使用全局变量表示他们）  </p>
 <p><del><code>render:animateTick</code>是什么？你把他忘了！</del><br />
 <del>好吧，下个章节再说</del></p>
 <h4 id="这里我们需要明确updates和manipulates基本的交互下称um同理renders称为r">这里我们需要明确Updates和Manipulates基本的交互（下称U/M，同理Renders称为R）：<a class="headerlink" href="#这里我们需要明确updates和manipulates基本的交互下称um同理renders称为r" title="Permanent link"></a></h4>
