@@ -387,6 +387,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Frame Skipping
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -396,6 +407,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#从urm进行扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      从URM进行扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从URM进行扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#目的" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#原理" class="md-nav__link">
+    <span class="md-ellipsis">
+      原理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -471,6 +534,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#从urm进行扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      从URM进行扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从URM进行扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#目的" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#原理" class="md-nav__link">
+    <span class="md-ellipsis">
+      原理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -485,6 +589,25 @@
 
 
 <h1 id="frame-skipping">Frame Skipping<a class="headerlink" href="#frame-skipping" title="Permanent link"></a></h1>
+<p>我们这里会从主观感受上讨论sc运作的原理，这是实验科学。<del>为自己不会看sc源码找借口。</del><br />
+呃、总之，更详细的内容可以从<a href="https://github.com/FurryR">FurryR</a>处寻找，这里只会提及与我们所需相关的部分。  </p>
+<hr />
+<h2 id="从urm进行扩展">从URM进行扩展<a class="headerlink" href="#从urm进行扩展" title="Permanent link"></a></h2>
+<hr />
+<h4 id="目的">目的<a class="headerlink" href="#目的" title="Permanent link"></a></h4>
+<p>众所周知，sc的画笔渲染速度一直是个大问题。写的大的作品轻则20fps，重则5fps封顶。<br />
+如果只是渲染上卡顿，那还说的过去<sub>~一帧能玩，两帧流畅，三帧电竞</sub>~。<br />
+可是经常遇到的却是鼠标点了七八下却毫无反应。  </p>
+<p>我们的目的是略微降低fps，换取用户流畅的使用体验。</p>
+<h4 id="原理">原理<a class="headerlink" href="#原理" title="Permanent link"></a></h4>
+<p>我们都知道这么做和这么做的运算效率差别很大：  </p>
+<p>显而易见的就能发现，是部分模块阻止了原版sc去达到高速度。  </p>
+<p>我们都知道sc是30帧，那我们设定让U不断运行，等到R快要能执行了，再去触发R不就好了？  </p>
+<p>成功。（？）  </p>
+<p>当然没这么简单。在特殊情况下，状况会比较炸裂，我可以简单分析下：<br />
+1.
+2.
+3.</p>
 
 
 
