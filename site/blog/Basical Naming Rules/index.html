@@ -596,9 +596,41 @@
 
 <h1 id="basical-naming-rules">Basical Naming Rules<a class="headerlink" href="#basical-naming-rules" title="Permanent link"></a></h1>
 <h2 id="基础部分">基础部分<a class="headerlink" href="#基础部分" title="Permanent link"></a></h2>
+<p>驼峰式: 大部分变量。</p>
+<p>后缀<code>(ust)</code>: <code>unstatic</code> 即为 非<code>常量</code>——意为私有变量。</p>
+<p>后缀<code>(nfs)</code>: <code>no freeze screen</code> 即为 不<code>冻结屏幕</code>——仅对函数标注，意为未勾选<code>不刷新屏幕</code>。</p>
+<p>前缀<code>xxx:</code>: xxx为作用域，一般用于一个函数的独有变量。例：AdjustCardData中使用变量i，写作acd:i。  </p>
+<p>前缀<code>~</code>/<code>~XXX</code>: 例如<code>~ub:tempList</code>、<code>~RENDERgame:selecting?</code>或<code>~GUIplayerShop:goodsList</code>，第一级作用域一般较大且使用大写全名+驼峰子域名。标注全局变量/列表，用于代码块间交互。</p>
+<p>大写式: 例如<code>CARD_DATA_TYPES</code>，一般等价于<code>enum</code>(枚举)，用于全局不改变的常量，一般为列表。</p>
+<p>下划线式: 例如<code>animate_tick</code>，一般代表<code>非克隆体</code>作用域下<code>常量</code>。(现一般用驼峰式代替。)</p>
+<p>前缀<code>~~</code>: 类似<code>~</code>，但一般用于同种模块的不同克隆体间交互，较少用。一般字母使用小写。</p>
+<p>前缀<code>~~~</code>: 将变量/列表/函数标注为测试用途，一般字母使用大写。</p>
+<p>驼峰式前缀: 部分情况下使用首字母标注前缀出现相同的情况，这时必须使用驼峰式前缀，但表意完全的情况下可省略部分单词的小写字母。</p>
+<p>空格式函数：一般存在与<code>add</code>和<code>new</code>以及<code>summon ... to stage</code>(用于动态克隆池)，分别表示注册、新建或帧动画，例：<code>add weapon</code>、<code>new fruit</code>、<code>summon card to stage</code>。一般不标注<code>(ust)</code>和<code>(nfs)</code>。</p>
+<p>省略式变量: 对于长单词，可用简写代替一部分单词。如<code>positionedResourceLocationInbattleWithDimension</code>可简写为<code>POS_RES_LOC_inbattleWith_DIM</code>或<code>PRL_inbattleWith_D</code>。一般使用(大写首字母串联、简写间无下划线)或(大写长简称串联、简写间有下划线)。其中，只要一个地方左右存在需要下划线的情况，就需要下划线(开头末尾除外)。下划线后驼峰开头用小写。前后缀对该部分命名无影响。作用域可使用纯小写字母表示单词(不需下划线)或依照上述方案(单个字母作简称时可直接改为小写，需要填写的下划线不变)。</p>
+<p>子函数: 对函数进行封装的过程中，仅用于对某函数的部分模块封装的情况下，可以使用子函数标注，这时可以自由使用父函数变量。当标注子函数时使用<code>::</code>中缀，当标注子函数时使用<code>.</code>中缀。例：<code>drawCard</code>的私有子函数<code>drawData</code>可写作<code>dc::drawData(ust)</code>，子函数独有<code>temp</code>私有变量写作<code>dc.drawData:temp(ust)</code>；<code>renderMap</code>的子函数<code>renderBlock</code>可写作<code>renderMap::renderBlock</code>，其循环变量<code>i</code>可写作<code>renderMap.rb:i</code>或<code>renderMap:i</code>(这涉及到<code>Render</code>部分特殊命名规则)。</p>
+<p>后缀<code>?</code>: 表示布尔值，可用于变量和列表。</p>
+<p>定长列表: 使用<code>[x]</code>作为后缀，x表示长度。用于提示使用时注意固定的长度不能随意改变。</p>
+<p>选值变量/列表: 使用<code>[a/b/c/...]</code>作为后缀，其中每一项代表可填的内容。(现一般较少用。)<del>正常来说没人会只限制一个值对吧？</del></p>
+<p>前后缀共用: <code>(ust)(nfs)</code>可写作<code>(ust,nfs)</code>，先写<code>?</code>再写<code>()</code>。<code>[x][a/b/c/...]</code>可写作<code>[x;a/b/c/...]</code>。</p>
+<p>特殊功能变量/列表：<br />
+1. 使用功能代替作用域放到前缀。如用<code>player</code>和<code>enemy</code>区分敌我。<br />
+2. 一组变量/列表(一般为列表)来描述一个对象，作用域处填写对象种类。用于减少字符串拆解的复杂度。
+3. 类似2，但作用域处需要复数。承载<code>new</code>在初始化部分添加的值。</p>
+<p>大定义域特殊功能变量/列表: 一般带有<code>(in...)</code>例如玩家魔力值，假设战斗结束后回满，此时需要在战斗中独有的玩家魔力值。可写作<code>player:mp(inbattle)</code>。</p>
+<p>前缀<code>u-</code>、<code>w-</code>、<code>z-</code>: 用于常用函数更易获取。点击函数后的首个拓展(一般都有至少一个拓展吧?)后向上滑滚轮即可快速索引函数。(用处不大，三者区别未定义)</p>
+<p>前缀<code>#</code>: 一般用于引擎中，表示此变量请不要触及。一般无作用域，直接用小写(可带省略)+下划线或横线(单词间，强制)。</p>
 <h2 id="urm部分">URM部分<a class="headerlink" href="#urm部分" title="Permanent link"></a></h2>
+<p><code>Render</code>:<br />
+  涉及该部分渲染的子函数变量的作用域需要全称驼峰，可省略子函数(此处指某部分Render函数)中的子函数(用于封装的函数)。正常情况下函数不能使用<code>()</code>后缀。此处不能更新非<code>~</code>数据(包括不能更改<code>~~</code>)，可以修改<code>client:hasRenderFinished?</code>。不可使用会造成等待的模块。</p>
+<p><code>Update</code>:<br />
+  大致同Render。子函数变量作用域一般使用小写首字母简称。此处一般用于判断输入、依照固定速率更新游戏。不可使用会造成等待、屏幕刷新的模块。</p>
+<p><code>Manipulate</code>:<br />
+  这部分一般使用单个loop、广播或Event。除非使用loop，非子函数部分必须标注<code>(ust,nfs)</code>或<code>(event)</code>(不要只标注不遵循！！)。此处用于处理<code>Update</code>发来的信息。一般使用单变量交互，名为<code>GUI:result</code>。检测时注意<code>renderTab</code>是否为当前<code>Manipulation</code>，避免tab间信息读取时造成影响。广播名称或event名称可做作用域名称。此处仅用于发起不连续的变化以及对<code>Render</code>和<code>Update</code>的tab进行变更。</p>
 <h2 id="跳帧与克隆池结合部分">跳帧与克隆池结合部分<a class="headerlink" href="#跳帧与克隆池结合部分" title="Permanent link"></a></h2>
 <h2 id="事件部分">事件部分<a class="headerlink" href="#事件部分" title="Permanent link"></a></h2>
+<p>后缀<code>(event)</code>: 实际效果包含<code>(ust,nfs)</code>，还传递了<code>我是event</code>或<code>我与event密切相关</code>的信息。<br />
+与post easily相关的模块请使用空格式命名。</p>
 
 
 
