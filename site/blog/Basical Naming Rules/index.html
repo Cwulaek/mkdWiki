@@ -603,7 +603,8 @@
 例：AdjustCardData中使用变量i，写作acd:i。  </p>
 <p>前缀<code>~</code>/<code>~XXX</code>: 例如<code>~ub:tempList</code>、<code>~RENDERgame:selecting?</code>或<code>~GUIplayerShop:goodsList</code>，第一级作用域一般较大且使用大写全名+驼峰子域名。<br />
 标注全局变量/列表，用于代码块间交互。</p>
-<p>大写式: 例如<code>CARD_DATA_TYPES</code>，一般等价于<code>enum</code>(枚举)，用于全局不改变的常量，一般为列表。</p>
+<p>大写式: 例如<code>CARD_DATA_TYPES</code>，一般等价于<code>enum</code>(枚举)，用于全局不改变的常量，一般为列表。
+另外，部分该标注的列表被认为大多数情况下<code>只读</code>，仅在特殊情况下改变。</p>
 <p>下划线式: 例如<code>animate_tick</code>，一般代表<code>非克隆体</code>作用域下<code>常量</code>。(现一般用驼峰式代替。)</p>
 <p>前缀<code>~~</code>: 类似<code>~</code>，但一般用于同种模块的不同克隆体间交互，较少用。<br />
 一般字母使用小写。</p>
@@ -617,7 +618,7 @@
 下划线后驼峰开头用小写。前后缀对该部分命名无影响。<br />
 作用域可使用纯小写字母表示单词(不需下划线)或依照上述方案(单个字母作简称时可直接改为小写，需要填写的下划线不变)。</p>
 <p>子函数: 对函数进行封装的过程中，仅用于对某函数的部分模块封装的情况下，可以使用子函数标注，这时可以自由使用父函数变量。<br />
-当标注子函数时使用<code>::</code>中缀，当标注子函数时使用<code>.</code>中缀。<br />
+当标注子函数时使用<code>::</code>中缀，当标注子函数的独有变量或子函数时使用<code>.</code>中缀。<br />
 例：<code>drawCard</code>的私有子函数<code>drawData</code>可写作<code>dc::drawData(ust)</code>，子函数独有<code>temp</code>私有变量写作<code>dc.drawData:temp(ust)</code>；<code>renderMap</code>的子函数<code>renderBlock</code>可写作<code>renderMap::renderBlock</code>，其循环变量<code>i</code>可写作<code>renderMap.rb:i</code>或<code>renderMap:i</code>(这涉及到<code>Render</code>部分特殊命名规则)。</p>
 <p>后缀<code>?</code>: 表示布尔值，可用于变量和列表。</p>
 <p>定长列表: 使用<code>[x]</code>作为后缀，x表示长度。用于提示使用时注意固定的长度不能随意改变。</p>
