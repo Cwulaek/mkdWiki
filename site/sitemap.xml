@@ -2,52 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mydomain.org/mysite/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/origin_index/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Basical%20Naming%20Rules/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Black%20Screens/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/Channel/</loc>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Colorful%20Costumes/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Event%20Attached/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Frame%20Skipping/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Input%20Gathering/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/Project%20Analysis/</loc>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/URM/</loc>
-         <lastmod>2024-05-18</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

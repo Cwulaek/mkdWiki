@@ -247,6 +247,43 @@
                 
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Engines
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Engines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
     
   
@@ -346,9 +383,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#事件部分" class="md-nav__link">
+  <a href="#事件部分-event" class="md-nav__link">
     <span class="md-ellipsis">
-      事件部分
+      事件部分 Event
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#频道部分-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      频道部分 Channel
     </span>
   </a>
   
@@ -516,6 +562,78 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project%20Analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
   </ul>
 </nav>
@@ -571,9 +689,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#事件部分" class="md-nav__link">
+  <a href="#事件部分-event" class="md-nav__link">
     <span class="md-ellipsis">
-      事件部分
+      事件部分 Event
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#频道部分-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      频道部分 Channel
     </span>
   </a>
   
@@ -645,9 +772,12 @@
   检测时注意<code>renderTab</code>是否为当前<code>Manipulation</code>，避免tab间信息读取时造成影响。<br />
   广播名称或event名称可做作用域名称。此处仅用于发起不连续的变化以及对<code>Render</code>和<code>Update</code>的tab进行变更。</p>
 <h2 id="跳帧与克隆池结合部分">跳帧与克隆池结合部分<a class="headerlink" href="#跳帧与克隆池结合部分" title="Permanent link"></a></h2>
-<h2 id="事件部分">事件部分<a class="headerlink" href="#事件部分" title="Permanent link"></a></h2>
+<h2 id="事件部分-event">事件部分 Event<a class="headerlink" href="#事件部分-event" title="Permanent link"></a></h2>
 <p>后缀<code>(event)</code>: 实际效果包含<code>(ust,nfs)</code>，还传递了<code>我是event</code>或<code>我与event密切相关</code>的信息。<br />
 与post easily相关的模块请使用空格式命名。</p>
+<h2 id="频道部分-channel">频道部分 Channel<a class="headerlink" href="#频道部分-channel" title="Permanent link"></a></h2>
+<p>格式: <code>CHANNEL-</code> + <code>[side]</code> + <code>-</code> + <code>[identifier]</code> 用于表征一个频道。<br />
+如 <code>CHANNEL-S-map</code> 和 <code>CHANNEL-C-map</code>。</p>
 
 
 

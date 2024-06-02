@@ -55,11 +55,14 @@ markdown_extensions:
 nav:
   - index.md
   - Blog:
-    - blog/index.md
-    - blog/Basical Naming Rules/index.md
-    - blog/Black Screens/index.md
-    - blog/URM/index.md
-    - blog/Colorful Costumes/index.md
-    - blog/Input Gathering/index.md
-    - blog/Frame Skipping/index.md
-    - blog/Event Attached/index.md
+    - Engines:
+      - blog/index.md
+      - blog/Basical Naming Rules/index.md
+      - blog/Black Screens/index.md
+      - blog/URM/index.md
+      - blog/Colorful Costumes/index.md
+      - blog/Input Gathering/index.md
+      - blog/Frame Skipping/index.md
+      - blog/Event Attached/index.md
+    - Projects:
+      - blog/Project Analysis/index.md
