@@ -79,7 +79,12 @@
 
 
 
-## 事件部分
+## 事件部分 Event
 
 后缀`(event)`: 实际效果包含`(ust,nfs)`，还传递了`我是event`或`我与event密切相关`的信息。  
 与post easily相关的模块请使用空格式命名。
+
+## 频道部分 Channel
+
+格式: `CHANNEL-` + `[side]` + `-` + `[identifier]` 用于表征一个频道。  
+如 `CHANNEL-S-map` 和 `CHANNEL-C-map`。
