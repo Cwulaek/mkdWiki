@@ -403,6 +403,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Input Gathering
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -412,6 +423,100 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#键盘侦测" class="md-nav__link">
+    <span class="md-ellipsis">
+      键盘侦测
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="键盘侦测">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#包装按键" class="md-nav__link">
+    <span class="md-ellipsis">
+      包装按键
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#点击和取消点击" class="md-nav__link">
+    <span class="md-ellipsis">
+      点击和取消点击
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#长按" class="md-nav__link">
+    <span class="md-ellipsis">
+      长按
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#鼠标侦测" class="md-nav__link">
+    <span class="md-ellipsis">
+      鼠标侦测
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="鼠标侦测">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#指定范围" class="md-nav__link">
+    <span class="md-ellipsis">
+      指定范围
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#特殊形状" class="md-nav__link">
+    <span class="md-ellipsis">
+      特殊形状
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -451,6 +556,27 @@
   
   <span class="md-ellipsis">
     Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Channel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Channels
   </span>
   
 
@@ -580,6 +706,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#键盘侦测" class="md-nav__link">
+    <span class="md-ellipsis">
+      键盘侦测
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="键盘侦测">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#包装按键" class="md-nav__link">
+    <span class="md-ellipsis">
+      包装按键
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#点击和取消点击" class="md-nav__link">
+    <span class="md-ellipsis">
+      点击和取消点击
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#长按" class="md-nav__link">
+    <span class="md-ellipsis">
+      长按
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#鼠标侦测" class="md-nav__link">
+    <span class="md-ellipsis">
+      鼠标侦测
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="鼠标侦测">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#指定范围" class="md-nav__link">
+    <span class="md-ellipsis">
+      指定范围
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#特殊形状" class="md-nav__link">
+    <span class="md-ellipsis">
+      特殊形状
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -594,6 +803,18 @@
 
 
 <h1 id="input-gathering">Input Gathering<a class="headerlink" href="#input-gathering" title="Permanent link"></a></h1>
+<p>sc本身的输入功能非常鸡肋，只能检测是否按下某个键。</p>
+<p>至少做到鼠标侦测（当角色被点击）那样吧。</p>
+<p>需要说明的是，我们主要以<a href="../URM/">URM</a>作为底层。</p>
+<h2 id="键盘侦测">键盘侦测<a class="headerlink" href="#键盘侦测" title="Permanent link"></a></h2>
+<h3 id="包装按键">包装按键<a class="headerlink" href="#包装按键" title="Permanent link"></a></h3>
+<h3 id="点击和取消点击">点击和取消点击<a class="headerlink" href="#点击和取消点击" title="Permanent link"></a></h3>
+<h3 id="长按">长按<a class="headerlink" href="#长按" title="Permanent link"></a></h3>
+<h2 id="鼠标侦测">鼠标侦测<a class="headerlink" href="#鼠标侦测" title="Permanent link"></a></h2>
+<p>仿照键盘部分即可，但是判定方式略有改变。<br />
+目前先将键盘部分内容拷贝过来并进行了少量修改。如图。</p>
+<h3 id="指定范围">指定范围<a class="headerlink" href="#指定范围" title="Permanent link"></a></h3>
+<h3 id="特殊形状">特殊形状<a class="headerlink" href="#特殊形状" title="Permanent link"></a></h3>
 
 
 
