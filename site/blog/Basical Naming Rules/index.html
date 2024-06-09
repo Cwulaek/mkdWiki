@@ -383,18 +383,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#事件部分-event" class="md-nav__link">
+  <a href="#事件部分-events" class="md-nav__link">
     <span class="md-ellipsis">
-      事件部分 Event
+      事件部分 Events
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#频道部分-channel" class="md-nav__link">
+  <a href="#频道部分-channels" class="md-nav__link">
     <span class="md-ellipsis">
-      频道部分 Channel
+      频道部分 Channels
     </span>
   </a>
   
@@ -710,18 +710,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#事件部分-event" class="md-nav__link">
+  <a href="#事件部分-events" class="md-nav__link">
     <span class="md-ellipsis">
-      事件部分 Event
+      事件部分 Events
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#频道部分-channel" class="md-nav__link">
+  <a href="#频道部分-channels" class="md-nav__link">
     <span class="md-ellipsis">
-      频道部分 Channel
+      频道部分 Channels
     </span>
   </a>
   
@@ -788,15 +788,15 @@
   大致同Render。子函数变量作用域一般使用小写首字母简称。<br />
   此处一般用于判断输入、依照固定速率更新游戏。不可使用会造成等待、屏幕刷新的模块。</p>
 <p><code>Manipulate</code>:<br />
-  这部分一般使用单个loop、广播或Event。除非使用loop，非子函数部分必须标注<code>(ust,nfs)</code>或<code>(event)</code>(不要只标注不遵循！！)。<br />
+  这部分一般使用单个loop、广播或Events。除非使用loop，非子函数部分必须标注<code>(ust,nfs)</code>或<code>(event)</code>(不要只标注不遵循！！)。<br />
   此处用于处理<code>Update</code>发来的信息。一般使用单变量交互，名为<code>GUI:result</code>。<br />
   检测时注意<code>renderTab</code>是否为当前<code>Manipulation</code>，避免tab间信息读取时造成影响。<br />
   广播名称或event名称可做作用域名称。此处仅用于发起不连续的变化以及对<code>Render</code>和<code>Update</code>的tab进行变更。</p>
 <h2 id="跳帧与克隆池结合部分">跳帧与克隆池结合部分<a class="headerlink" href="#跳帧与克隆池结合部分" title="Permanent link"></a></h2>
-<h2 id="事件部分-event">事件部分 Event<a class="headerlink" href="#事件部分-event" title="Permanent link"></a></h2>
+<h2 id="事件部分-events">事件部分 Events<a class="headerlink" href="#事件部分-events" title="Permanent link"></a></h2>
 <p>后缀<code>(event)</code>: 实际效果包含<code>(ust,nfs)</code>，还传递了<code>我是event</code>或<code>我与event密切相关</code>的信息。<br />
 与post easily相关的模块请使用空格式命名。</p>
-<h2 id="频道部分-channel">频道部分 Channel<a class="headerlink" href="#频道部分-channel" title="Permanent link"></a></h2>
+<h2 id="频道部分-channels">频道部分 Channels<a class="headerlink" href="#频道部分-channels" title="Permanent link"></a></h2>
 <p>格式: <code>CHANNEL-</code> + <code>[side]</code> + <code>-</code> + <code>[identifier]</code> 用于表征一个频道。<br />
 如 <code>CHANNEL-S-map</code> 和 <code>CHANNEL-C-map</code>。</p>
 

@@ -1,12 +1,12 @@
 # Channels
 
-这部分是作为高频双端Event的代替品而出现的。
+这部分是作为高频双端Events的代替品而出现的。
 
-虽然说此处的难度不及Event，但其思想源于Event。
+虽然说此处的难度不及Events，但其思想源于Events。
 
-## Event的一个劣势
+## Events的一个劣势
 
-如果你遇到以下情况，还想用Event，就会很难办：  
+如果你遇到以下情况，还想用 `Events`，就会很难办：  
 1. 两角色交互时存在大量的来回访问。此外，由于没有合适的命名规则，只能使用`~`。而且没有合适的交互方式的话会导致阻塞或者断路。  
 2. 异步的情况下希望获得返回值。
 
@@ -14,7 +14,7 @@
 
 ## 具体思想
 
-由于实现方案没有 `Event` 复杂，我们可以直接探讨 `Channels` 的思想。
+由于实现方案没有 `Events` 复杂，我们可以直接探讨 `Channels` 的思想。
 
 `Channels` 需要的：  
 区分两个交互的角色为 `S` 和 `C` 。  
@@ -22,7 +22,7 @@
 
 二者缺一不可。
 
-由此，我们要新建两个变量CHANNEL-S-[identifier]和CHANNEL-C-[identifier]。（具体见[命名规则](../Basical%20Naming%20Rules/index.md)）
+由此，我们要新建两个变量`CHANNEL-S-[identifier]`和`CHANNEL-C-[identifier]`。（具体见[命名规则](../Basical%20Naming%20Rules/index.md)）
 
 `Channels` 基础状态以及其他状态：  
 1. `empty`，一般记为 `空` 或不填。主要用于表示不在运行中。  

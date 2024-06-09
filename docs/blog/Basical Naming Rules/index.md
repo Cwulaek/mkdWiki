@@ -70,7 +70,7 @@
   此处一般用于判断输入、依照固定速率更新游戏。不可使用会造成等待、屏幕刷新的模块。
 
 `Manipulate`:  
-  这部分一般使用单个loop、广播或Event。除非使用loop，非子函数部分必须标注`(ust,nfs)`或`(event)`(不要只标注不遵循！！)。  
+  这部分一般使用单个loop、广播或Events。除非使用loop，非子函数部分必须标注`(ust,nfs)`或`(event)`(不要只标注不遵循！！)。  
   此处用于处理`Update`发来的信息。一般使用单变量交互，名为`GUI:result`。  
   检测时注意`renderTab`是否为当前`Manipulation`，避免tab间信息读取时造成影响。  
   广播名称或event名称可做作用域名称。此处仅用于发起不连续的变化以及对`Render`和`Update`的tab进行变更。
@@ -79,12 +79,12 @@
 
 
 
-## 事件部分 Event
+## 事件部分 Events
 
 后缀`(event)`: 实际效果包含`(ust,nfs)`，还传递了`我是event`或`我与event密切相关`的信息。  
 与post easily相关的模块请使用空格式命名。
 
-## 频道部分 Channel
+## 频道部分 Channels
 
 格式: `CHANNEL-` + `[side]` + `-` + `[identifier]` 用于表征一个频道。  
 如 `CHANNEL-S-map` 和 `CHANNEL-C-map`。
