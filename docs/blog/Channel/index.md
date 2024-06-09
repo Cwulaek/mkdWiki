@@ -1,8 +1,8 @@
 # Channels
 
-这部分是作为高频双端Events的代替品而出现的。
+这部分是作为高频双端`Events`的代替品而出现的。
 
-虽然说此处的难度不及Events，但其思想源于Events。
+虽然说此处的难度不及`Events`，但其思想源于`Events`。
 
 ## Events的一个劣势
 

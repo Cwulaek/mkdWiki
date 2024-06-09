@@ -435,9 +435,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#这里我们需要明确updates和manipulates基本的交互下称um同理renders称为r" class="md-nav__link">
+  <a href="#明确updates和manipulates基本的交互" class="md-nav__link">
     <span class="md-ellipsis">
-      这里我们需要明确Updates和Manipulates基本的交互（下称U/M，同理Renders称为R）：
+      明确Updates和Manipulates基本的交互
     </span>
   </a>
   
@@ -978,9 +978,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#这里我们需要明确updates和manipulates基本的交互下称um同理renders称为r" class="md-nav__link">
+  <a href="#明确updates和manipulates基本的交互" class="md-nav__link">
     <span class="md-ellipsis">
-      这里我们需要明确Updates和Manipulates基本的交互（下称U/M，同理Renders称为R）：
+      明确Updates和Manipulates基本的交互
     </span>
   </a>
   
@@ -1263,7 +1263,8 @@
 <hr />
 <h2 id="引入">引入<a class="headerlink" href="#引入" title="Permanent link"></a></h2>
 <hr />
-<p>简单来说，URM就是 <del>UnknownResourceMachine</del> 更新、渲染 和 控制<br />
+<p>简单来说，URM就是 <del>UnknownResourceMachine</del> 更新<code>Update</code>、渲染<code>Render</code> 和 控制<code>Manipulator</code>  <br />
+（下称<code>U</code>/<code>R</code>/<code>M</code>）<br />
 正常来说把三个部分放到一个循环里即可。  </p>
 <p><img align="left" alt="" src="../images/urm1.png" width="100" /> 三个函数里放置分别的函数，这个在<a href="">格式部分</a>讲述。<br />
 <del>格式部分不知道在哪放，于是一直没写。</del></p>
@@ -1274,7 +1275,7 @@
 <h2 id="更新部分-updates">更新部分 Updates<a class="headerlink" href="#更新部分-updates" title="Permanent link"></a></h2>
 <hr />
 <p>这部分主要负责的是内容更新，例如游戏帧更新、AI运行、根据操作部分获取的输入执行相关内容...等。<br />
-虽然说目前没必要将Updates和Renderers分得太死，但是你将会知道它的用处。  </p>
+虽然说目前没必要将<code>Updates</code>和<code>Renderers</code>分得太死，但是你将会知道它的用处。  </p>
 <p>既然我首先提及的架构是这个，那它一定有一定的优势（以免无聊到使人看不下去）。  </p>
 <h4 id="我们将隆重引入">我们将隆重引入...<a class="headerlink" href="#我们将隆重引入" title="Permanent link"></a></h4>
 <p><del>client:renderTab</del> 换个你更能看懂的：<code>当前渲染页面</code><br />
@@ -1291,15 +1292,15 @@
 </ul>
 <p><img alt="" src="../images/urm3.png" />  </p>
 <p>如你所见，我们没有写渲染部分，但是 <del>我知道你们一定自己会写</del> 我们会放在下一部分提及他们。  </p>
-<p>包含语句和特殊命名过的 client:renderTab 对应上述的二级字符串。简单来说：第一串字母和第一个<code>-</code>（随便你用什么，我喜欢用短横线）标识了第一级字符串；后序的每串字母由<code>-</code>隔开，分别作为第二级（不分前后）。</p>
-<p>二级字符串判断时需要判断包含 &lt;-name-&gt;，即两侧均需要输入短横线，name是你设置的状态。<br />
+<p>包含语句和特殊命名过的 <code>client:renderTab</code> 对应上述的二级字符串。简单来说：第一串字母和第一个<code>-</code>（随便你用什么，我喜欢用短横线）标识了第一级字符串；后序的每串字母由<code>-</code>隔开，分别作为第二级（不分前后）。</p>
+<p>二级字符串判断时需要判断包含 <code>&lt;-name-&gt;</code>，即两侧均需要输入短横线，name是你设置的状态。<br />
 这同时意味着我们需要复杂化第一级字符串避免出现 <code>adGui</code> 和 <code>breadGui</code> 这样后者包含前者的情况，但我相信利大于弊。</p>
-<p>需要指出的是，我们声明了 client:hasRenderFinished? 用于标识当前的状态（主要提供给M）；而GUI:result 用于向 M 提供状态。（由于 U 一定存在于本体，而 M 不一定，我们必须使用全局变量表示他们）  </p>
+<p>需要指出的是，我们声明了 <code>client:hasRenderFinished?</code> 用于标识当前的状态（主要提供给M）；而 <code>GUI:result</code> 用于向 M 提供状态。（由于 <code>U</code> 一定存在于本体，而 <code>M</code> 不一定，我们必须使用全局变量表示他们）  </p>
 <p><del><code>render:animateTick</code>是什么？你把他忘了！</del><br />
 <del>好吧，下个章节再说</del></p>
-<h4 id="这里我们需要明确updates和manipulates基本的交互下称um同理renders称为r">这里我们需要明确Updates和Manipulates基本的交互（下称U/M，同理Renders称为R）：<a class="headerlink" href="#这里我们需要明确updates和manipulates基本的交互下称um同理renders称为r" title="Permanent link"></a></h4>
-<p>U负责与控制模块交互，并将状态信息返回M<br />
-  M以其 与"U,R循环"隔开 的特性（如之前所说），可以使用等待模块等<a href="">U无法使用的模块</a>  </p>
+<h4 id="明确updates和manipulates基本的交互">明确Updates和Manipulates基本的交互<a class="headerlink" href="#明确updates和manipulates基本的交互" title="Permanent link"></a></h4>
+<p><code>U</code>负责与控制模块交互，并将状态信息返回<code>M</code><br />
+<code>M</code>以其 与"<code>U</code>,<code>R</code>循环"隔开 的特性（如之前所说），可以使用等待模块等<a href="">U无法使用的模块</a>  </p>
 <p>等我们明确Renders的作用后，我们会再来提及Updates。<br />
 <del>相信在看了这么多，你一定有所收获。</del><br />
 <del>不，我说真的。</del></p>
@@ -1322,7 +1323,7 @@
 <h4 id="setrender">setRender<a class="headerlink" href="#setrender" title="Permanent link"></a></h4>
 <p>切换状态最常用的函数之一。经常存在不同的写法，这种是最全的一种。<br />
 可以选择设置一些默认状态，详见我的<a href="../Basical%20Naming%20Rules/">函数命名规则</a>。  </p>
-<p>不过，如果需要页面间的切换动画，我们还有另一种写法，这需要 <code>blackscreen</code>:<a href="../Black%20Screens/">点我</a>，我一般将其称为setRenderTab。但一般使用的还是setRender。</p>
+<p>不过，如果需要页面间的切换动画，我们还有另一种写法，这需要 <code>blackscreen</code>:<a href="../Black%20Screens/">点我</a>，我一般将其称为<code>setRenderTab</code>。但一般使用的还是<code>setRender</code>。</p>
 <h4 id="update">Update<a class="headerlink" href="#update" title="Permanent link"></a></h4>
 <p>添加了帧动画的更新tick。<br />
 <del>render:animateTick：“你总算想起我了！”</del>  </p>
@@ -1335,8 +1336,8 @@
 GUI:result的值在监听状态下<code>一定为空</code>，一般得到的值<code>非空</code>。  </p>
 <p>总之，得到GUI:result的值后，它会随机造成伤害并开启动画。  </p>
 <h4 id="render">Render<a class="headerlink" href="#render" title="Permanent link"></a></h4>
-<p>到了我们的重头戏。<br />
-添加的这个选择语句用于避免帧间删除画面，而setRender中设定的值均满足条件，那很容易就有疑惑：究竟 <code>setReadable?</code> 是干什么的？<br />
+<p>到了我们的重头戏。(头轻脚重是合理的)<br />
+添加的这个选择语句用于避免帧间删除画面，而<code>setRender</code>中设定的值均满足条件，那很容易就有疑惑：究竟 <code>setReadable?</code> 是干什么的？<br />
 呃，很简单，<del>你不用知道。</del> 这在<a href="../Input%20Gathering/">操作封装</a>中有所说明。</p>
 <p>好了，接下来我们看中间的部分，我们在 游戏页面 讨论了两种情况，而有<code>~</code>的变量的作用于仅在其应在的页面中。<br />
 我们很容易就能注意到：每个页面的错误，仅仅会在那个页面找到（废话！）。<br />
@@ -1350,9 +1351,9 @@ GUI:result的值在监听状态下<code>一定为空</code>，一般得到的值
 <h2 id="广播的new-usages和events的引入">广播的new usages和Events的引入<a class="headerlink" href="#广播的new-usages和events的引入" title="Permanent link"></a></h2>
 <hr />
 <h3 id="广播是广播事件是事件">广播是广播，事件是事件。<a class="headerlink" href="#广播是广播事件是事件" title="Permanent link"></a></h3>
-<p>你会发现我上面的代码使用的M是广播实现的，而不是循环，它的优势很多，当然也存在劣势。  </p>
+<p>你会发现我上面的代码使用的<code>M</code>是广播实现的，而不是循环，它的优势很多，当然也存在劣势。  </p>
 <p>优势其一如上所说，能运行持续多帧的运算等。<br />
-其二对我来说没什么用，但喜欢克隆体的可能会比较喜欢（都用URM了用什么克隆体！？ <del>一会就打自己脸</del> ）。<br />
+其二对我来说没什么用，但喜欢克隆体的可能会比较喜欢（都用<code>URM</code>了用什么克隆体！？ <del>一会就打自己脸</del> ）。<br />
 其三...好像没了。</p>
 <p>不过广播架构起源甚早，作为最容易的开线程方式，长时间为人所使用。如果使用不当，也会bug连连。  </p>
 <h3 id="广播的劣势">广播的劣势<a class="headerlink" href="#广播的劣势" title="Permanent link"></a></h3>
@@ -1368,7 +1369,7 @@ GUI:result的值在监听状态下<code>一定为空</code>，一般得到的值
 <p>众所周知，射击游戏很好做，在迷宫游戏或者跑酷游戏上套壳即可。<br />
 其中用到的一个关键部分类似这样：<br />
 <img alt="" src="../images/urm6.png" />  </p>
-<p>众所周知，ust是unstatic，意味着"私有"。无论私有还是公共，变量会传递给克隆出的克隆体，那么我们可以仿照她（对，她）构思我们需要的方案。</p>
+<p>众所周知，<code>ust</code>是<code>unstatic</code>，意味着"私有"。无论私有还是公共，变量会传递给克隆出的克隆体，那么我们可以仿照她（对，她）构思我们需要的方案。</p>
 <p>于是就产生了：</p>
 <h3 id="前身之-command列表">前身之 command列表<a class="headerlink" href="#前身之-command列表" title="Permanent link"></a></h3>
 <p>本质上是子弹封装的实际运行。</p>
@@ -1393,7 +1394,7 @@ GUI:result的值在监听状态下<code>一定为空</code>，一般得到的值
 <h4 id="出场动画和退场动画">出场动画和退场动画<a class="headerlink" href="#出场动画和退场动画" title="Permanent link"></a></h4>
 <p>由于在这个例子中，<code>A</code>只存在一个，我们可以认为<code>A</code>出场、<code>A</code>退场、<code>A</code>处在其他状况为三个子页面。<br />
 然后就简单的构思好了相关的代码。（动画比较逆天，看不懂无所谓）<br />
-这个代码应该还是比较简单的，但是我们可以封装一个draw函数：  </p>
+这个代码应该还是比较简单的，但是我们可以封装一个<code>draw</code>函数：  </p>
 <p>这样就可以一下写完两处的代码了：  </p>
 <p>我们暂时不需要管能否访问到这里，不过正常来说应该也会做吧。</p>
 <h4 id="游戏和菜单">游戏和菜单<a class="headerlink" href="#游戏和菜单" title="Permanent link"></a></h4>

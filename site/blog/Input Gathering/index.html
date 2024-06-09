@@ -819,7 +819,20 @@
 <a href="test1.html">点此测试</a><br />
 由于数显的存在与否无关紧要，我们目前的渲染直接使用原生sc的变量。</p>
 <h3 id="点击和取消点击">点击和取消点击<a class="headerlink" href="#点击和取消点击" title="Permanent link"></a></h3>
+<p>注意到上述仅仅一个 <code>status</code> 作为结果来处理略显不足，因我们不能让上层部分覆盖下层部分的读入。<br />
+所以我们要新增一个列表 <code>result</code>。</p>
+<p>此时，我们可以用 <code>status</code> 表示按键是否按下，而 <code>result</code> 可以表示是否在这一刻进行了变化以及变成了什么。</p>
+<p>挺简单的，直接写了：<br />
+<img alt="" src="" />
+<a href="">点此测试</a></p>
 <h3 id="长按">长按<a class="headerlink" href="#长按" title="Permanent link"></a></h3>
+<p>我们简单想一下就知道，长按跟点击要分开。<br />
+但是当你对比一下仅有点击和仅有长按的逻辑，就会发现 <code>status</code>的部分是相同的：  </p>
+<p><img alt="" src="" />  </p>
+<p>所以我们直接合并即可。<br />
+也简单写了：<br />
+<img alt="" src="" /><br />
+<a href="">点此测试</a></p>
 <h2 id="鼠标侦测">鼠标侦测<a class="headerlink" href="#鼠标侦测" title="Permanent link"></a></h2>
 <p>仿照键盘部分即可，但是判定方式略有改变。<br />
 目前先将键盘部分内容拷贝过来并进行了少量修改。如图。</p>

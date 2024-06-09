@@ -588,6 +588,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#子类标记参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      子类标记参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#eventlisteners分类器" class="md-nav__link">
     <span class="md-ellipsis">
       EventListeners/分类器
@@ -882,6 +891,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#子类标记参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      子类标记参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#eventlisteners分类器" class="md-nav__link">
     <span class="md-ellipsis">
       EventListeners/分类器
@@ -967,12 +985,25 @@
 <h3 id="多端event">多端Event<a class="headerlink" href="#多端event" title="Permanent link"></a></h3>
 <p>当你使用多角色...</p>
 <h3 id="页面event">页面Event<a class="headerlink" href="#页面event" title="Permanent link"></a></h3>
-<p>...</p>
+<p>专门作为<code>Manipulator</code>使用...</p>
+<h3 id="子类标记参数">子类标记参数<a class="headerlink" href="#子类标记参数" title="Permanent link"></a></h3>
+<p>在常见参数后，可以添加不定数量的子类标记参数。（注意，这部分可能不保证合法性，可能有潜在的bug）<br />
+举例：假定<code>OnDamageTo</code>事件的参数有3个，为<code>toEnemy?</code>、<code>toPos</code>和<code>amount</code>，只跟收到伤害方有关。<br />
+这个事件的创建是合理的，因为伤害可以是无来源的。如果我们要关联来源，可以单加一个事件，但与<code>EventTriggers</code>和<code>EventListeners</code>等共用时会稍显冗余。  </p>
+<p>此时，我们可以在参数后面添加<code>子类标记参数</code>。<br />
+假定我们将来源称作<code>fromE</code>，对于<code>OnDamageTo(true,1,5)</code>，我们改为<code>OnDamageTo(true,1,5,fromE(false, 0))</code>。<br />
+在sc中，写作<code>1 1 5 :fromE 0 3</code>，我们一般将布尔类型写作数值。</p>
+<p>我们正常情况下不会处理后面的值，而前缀符<code>:fromE</code>则可以帮助我们定位参数。<br />
+一般索引时，查找第一个<code>:[identifier](空格)</code>或<code>(空格):[identifier](空格)</code>，这可以避免一些问题。</p>
 <h3 id="eventlisteners分类器">EventListeners/分类器<a class="headerlink" href="#eventlisteners分类器" title="Permanent link"></a></h3>
-<p>作用：运行无指定对象，但指定了种类的内容。</p>
-<p>...</p>
+<p>作用：运行无指定对象，但指定了种类的一些内容。<br />
+有两种用途。  </p>
+<p>一种是对已有的 <code>Events</code> 进行结果再处理（更常使用<code>EventTriggers</code>）；<br />
+一种是在某处特别发送一个特殊的 <code>Events</code>，其处理结果的过程仅仅为赋值一个变量、简单运算或者空。 </p>
+<p>我举个例子：<br />
+...</p>
 <h3 id="event换头以及event归类">Event换头以及Event归类<a class="headerlink" href="#event换头以及event归类" title="Permanent link"></a></h3>
-<p>作用：对于已有对象，强制类型转换。</p>
+<p>作用：对于已有对象，强制类型转换（无对象、其他Event或其他类型的对象）。</p>
 <p>...</p>
 <h3 id="eventtriggers触发器">EventTriggers/触发器<a class="headerlink" href="#eventtriggers触发器" title="Permanent link"></a></h3>
 <p>作用：将无指定对象的 <code>Events</code> 指定对象。</p>
