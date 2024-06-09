@@ -807,7 +807,17 @@
 <p>至少做到鼠标侦测（当角色被点击）那样吧。</p>
 <p>需要说明的是，我们主要以<a href="../URM/">URM</a>作为底层。</p>
 <h2 id="键盘侦测">键盘侦测<a class="headerlink" href="#键盘侦测" title="Permanent link"></a></h2>
+<p>为了便捷地动态增减要侦测的按键，我们要用列表把它们存起来。  </p>
 <h3 id="包装按键">包装按键<a class="headerlink" href="#包装按键" title="Permanent link"></a></h3>
+<p>我们可以简单设想一下我们要实现的：检测点击、抬起和长按。<br />
+让我们先把对于每种按键都要进行一遍的<code>如果&lt;()按下&gt;...否则...</code>化简一下。</p>
+<p>我讲下想法，免得这步有些跳跃。</p>
+<p>首先，用列表存储要侦测的按键种类，并将按键命名，以方便游戏中自定义按键。<br />
+然后，在每次更新时调用按键侦测。</p>
+<p>具体如下：
+<img alt="" src="../images/ig1.png" />
+<a href="test1.html">点此测试</a><br />
+由于数显的存在与否无关紧要，我们目前的渲染直接使用原生sc的变量。</p>
 <h3 id="点击和取消点击">点击和取消点击<a class="headerlink" href="#点击和取消点击" title="Permanent link"></a></h3>
 <h3 id="长按">长按<a class="headerlink" href="#长按" title="Permanent link"></a></h3>
 <h2 id="鼠标侦测">鼠标侦测<a class="headerlink" href="#鼠标侦测" title="Permanent link"></a></h2>
