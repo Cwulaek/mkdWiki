@@ -247,6 +247,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    个人介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -259,10 +280,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -273,8 +294,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Engines
           </label>
@@ -482,6 +503,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#控制时间" class="md-nav__link">
+    <span class="md-ellipsis">
+      控制时间
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#鼠标侦测" class="md-nav__link">
     <span class="md-ellipsis">
       鼠标侦测
@@ -509,8 +539,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#滚轮" class="md-nav__link">
+    <span class="md-ellipsis">
+      滚轮
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#减小开销" class="md-nav__link">
+    <span class="md-ellipsis">
+      减小开销
+    </span>
+  </a>
   
 </li>
       
@@ -629,10 +677,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -643,8 +691,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Projects
           </label>
@@ -755,6 +803,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#控制时间" class="md-nav__link">
+    <span class="md-ellipsis">
+      控制时间
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#鼠标侦测" class="md-nav__link">
     <span class="md-ellipsis">
       鼠标侦测
@@ -782,8 +839,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#滚轮" class="md-nav__link">
+    <span class="md-ellipsis">
+      滚轮
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#减小开销" class="md-nav__link">
+    <span class="md-ellipsis">
+      减小开销
+    </span>
+  </a>
   
 </li>
       
@@ -810,34 +885,73 @@
 <p>为了便捷地动态增减要侦测的按键，我们要用列表把它们存起来。  </p>
 <h3 id="包装按键">包装按键<a class="headerlink" href="#包装按键" title="Permanent link"></a></h3>
 <p>我们可以简单设想一下我们要实现的：检测点击、抬起和长按。<br />
-让我们先把对于每种按键都要进行一遍的<code>如果&lt;()按下&gt;...否则...</code>化简一下。</p>
+让我们先把对于每种按键都要进行一遍的 <code>如果&lt;()按下&gt;...否则...</code> 化简一下。</p>
 <p>我讲下想法，免得这步有些跳跃。</p>
 <p>首先，用列表存储要侦测的按键种类，并将按键命名，以方便游戏中自定义按键。<br />
-然后，在每次更新时调用按键侦测。</p>
+然后，在每次更新时调用按键侦测。<br />
+侦测后，<code>ckp:result(ust)==1</code> 就等价于 <code>&lt;()按下&gt;</code> 了。  </p>
 <p>具体如下：
 <img alt="" src="../images/ig1.png" />
 <a href="test1.html">点此测试</a><br />
-由于数显的存在与否无关紧要，我们目前的渲染直接使用原生sc的变量。</p>
+由于数显的存在与否无关紧要，我们目前的渲染直接使用原生sc的变量。  </p>
 <h3 id="点击和取消点击">点击和取消点击<a class="headerlink" href="#点击和取消点击" title="Permanent link"></a></h3>
 <p>注意到上述仅仅一个 <code>status</code> 作为结果来处理略显不足，因我们不能让上层部分覆盖下层部分的读入。<br />
 所以我们要新增一个列表 <code>result</code>。</p>
 <p>此时，我们可以用 <code>status</code> 表示按键是否按下，而 <code>result</code> 可以表示是否在这一刻进行了变化以及变成了什么。</p>
-<p>挺简单的，直接写了：<br />
-<img alt="" src="" />
-<a href="">点此测试</a></p>
+<p>然后，我们将 <code>status</code> 根据 <code>0</code>/<code>1</code> 分开。  </p>
+<p>为什么？<br />
+只有在 <code>0</code> 时，检测到按下，是点击；在 <code>1</code> 时，检测到按下，是持续按下，不属于点击。</p>
+<p>于是我们成功把 <code>按下</code> 转化为了 <code>点击</code>/<code>持续按下</code> 两种情况。  </p>
+<p>另外，侦测的时候，要改为对 <code>result</code> 判断。<br />
+全都改完之后是这样：  </p>
+<p><img alt="" src="../images/ig2.png" />  </p>
+<p>此时如果你点击测试，会发现..<br />
+根本停不下来啊！！  </p>
+<p>对，我们忘记了清除 <code>result</code>。
+所以我们要在侦测的地方把 <code>result</code> 重新赋值为 <code>0</code>。</p>
+<p>另外，每一帧都要重置 <code>result</code>，避免“暂时没有侦测的时候，<code>result</code> 一直保留着，侦测的时候不小心侦测到了亿万年以前的点击”这样的情况发生。<br />
+所以我新建了一个函数 <code>resetControl</code>。修改完如下：（额、为了让代码块看起来更大，稍微重新排布了一下）  </p>
+<p><img alt="" src="../images/ig3.png" /><br />
+<a href="test2.html">点此测试</a></p>
 <h3 id="长按">长按<a class="headerlink" href="#长按" title="Permanent link"></a></h3>
 <p>我们简单想一下就知道，长按跟点击要分开。<br />
-但是当你对比一下仅有点击和仅有长按的逻辑，就会发现 <code>status</code>的部分是相同的：  </p>
-<p><img alt="" src="" />  </p>
-<p>所以我们直接合并即可。<br />
-也简单写了：<br />
-<img alt="" src="" /><br />
-<a href="">点此测试</a></p>
+不过，我们刚才实现了一部分长按，就是 <code>status</code> 为 <code>1</code> 时对应的状态。  </p>
+<p>但是如果只是这样，长按跟最开始的情况没有区别吗？<br />
+我认为做到“根据点击时长决定效果”会比较酷。</p>
+<p>我们刚才写的 <code>not&lt;status==0&gt;</code>，也提示了这一点：我们可以让 <code>status</code> 大于 <code>1</code>，表示长按的时长。
+那我们先让每 <code>30帧</code> （**正常情况下**约 <code>1秒</code>）记为标准的长按，来尝试触发一下。</p>
+<p>那我们的更改部分还包括 <code>checkKeyPressing</code>，我们需要加一个参数来声明是长按还是点击。</p>
+<p>具体地，我们先实现一个重置键，可以在长按一秒后将中间的数值归零。  </p>
+<p>此时要讲一个特殊的操作：（详细见代码）<br />
+我们要单独对单点进行处理。<br />
+在后面访问长按时，由于 <code>result==0</code> 一定成立，不会由于单点而触发相关操作。<br />
+（一定先单点，再长按，这部分后面会有更多的讲解）  </p>
+<p><img alt="" src="../images/ig4.png" /><br />
+<a href="test3.html">点此测试</a>  </p>
+<p>好了，实现了固定时长的长按，我们能否实现更多内容？比如指定长按时间？  </p>
+<p>我们需要为 <code>checkKeyPressing</code> 增加参数，控制长按时长。<br />
+简单观察发现，其余部分不需要进行更改。<br />
+不过，我们把 <code>checkKeyPressing</code> 的内容进行了一些修改，节省一些模块，并增加可读性。  </p>
+<p><img alt="" src="../images/ig5.png" />  </p>
+<p>当然，这里可以做一些奇妙操作，让操作更为顺滑。<br />
+简单来说，我们可以单独设定第一次长按所需的时间。  </p>
+<p><img alt="" src="../images/ig6.png" /><br />
+<a href="test4.html">点此测试</a>  </p>
+<p>这样，我们就实现了以下几类操作：<br />
+1. 单点，只填第一个参数即可。<br />
+2. 条件长按，具体分类见下，与 <code>1</code> 的差别是所有参数都要填，但是判断是否可长按存在条件，如 <code>player.runable?==1</code>(<code>玩家可奔跑?==1</code>) 等。<br />
+3. 长按后仅触发一次，最后一个参数填 <code>Infinity</code>。<br />
+4. 长按，且长按第一次触发前需要一定延迟，此时倒数第二个要填较大值，最后一个要填较小值。<br />
+5. 长按，且长按第一次触发前不需延迟，此时倒数两个数均填较小值即可。</p>
+<h2 id="控制时间">控制时间<a class="headerlink" href="#控制时间" title="Permanent link"></a></h2>
+<p>通过与 <code>跳帧</code> 结合，我们可以同时适配 <code>30帧</code> 与 <code>60帧</code>。</p>
 <h2 id="鼠标侦测">鼠标侦测<a class="headerlink" href="#鼠标侦测" title="Permanent link"></a></h2>
 <p>仿照键盘部分即可，但是判定方式略有改变。<br />
 目前先将键盘部分内容拷贝过来并进行了少量修改。如图。</p>
 <h3 id="指定范围">指定范围<a class="headerlink" href="#指定范围" title="Permanent link"></a></h3>
 <h3 id="特殊形状">特殊形状<a class="headerlink" href="#特殊形状" title="Permanent link"></a></h3>
+<h3 id="滚轮">滚轮<a class="headerlink" href="#滚轮" title="Permanent link"></a></h3>
+<h2 id="减小开销">减小开销<a class="headerlink" href="#减小开销" title="Permanent link"></a></h2>
 
 
 
