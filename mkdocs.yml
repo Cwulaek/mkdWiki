@@ -55,6 +55,7 @@ markdown_extensions:
 nav:
   - index.md
   - Blog:
+    - introduction/index.md
     - Engines:
       - blog/index.md
       - blog/Basical Naming Rules/index.md
@@ -67,4 +68,3 @@ nav:
       - blog/Channel/index.md
     - Projects:
       - blog/Project Analysis/index.md
-    - introduction/index.md
