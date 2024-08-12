@@ -10,8 +10,15 @@
 
 ### [跳帧](./Frame%20Skipping/index.md)  
 
+### [简易黑屏](./Black%20Screens/index.md)
+
 ### [事件](./Event%20Attached/index.md)  
 
 ### [多彩角色](./Colorful%20Costumes/index.md)  
 
 ### [输入封装](./Input%20Gathering/index.md)
+
+### [频道](./Channels/index.md)
+
+### [全局数据](./Global%20Datas/index.md)
+

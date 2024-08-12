@@ -11,8 +11,10 @@
         <link rel="canonical" href="https://mydomain.org/mysite/blog/Project%20Analysis/">
       
       
-        <link rel="prev" href="../Channel/">
+        <link rel="prev" href="../Global%20Datas/">
       
+      
+        <link rel="next" href="Codemon/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Introduction - Scratch works and Scratch works</title>
+        <title>实际代码案例分析 - Scratch works and Scratch works</title>
       
     
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#实际代码案例分析" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              实际代码案例分析
             
           </span>
         </div>
@@ -474,11 +476,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../Channel/" class="md-nav__link">
+      <a href="../Channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Channels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global%20Datas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Datas
   </span>
   
 
@@ -574,12 +597,75 @@
         
   
   <span class="md-ellipsis">
-    Introduction
+    实际代码案例分析
   </span>
   
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Codemon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Codemon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DCard_Legend/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DCard:Legend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Parabox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parabox
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -633,7 +719,21 @@
                   
 
 
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link"></a></h1>
+<h1 id="实际代码案例分析">实际代码案例分析<a class="headerlink" href="#实际代码案例分析" title="Permanent link"></a></h1>
+<p>对我目前编写的项目进行分块说明。（当然，随着项目不断开发，仍有待完善）</p>
+<p>主要分 <code>Server</code>/<code>Client</code>，同时会在内部再细分。（均为双角色）</p>
+<p><code>Server</code> 负责数据操作，<code>Client</code> 负责渲染及相关交互。<br />
+<code>Client</code> 不能直接修改数据，需要发包。（<code>Event</code>/<code>Channels</code>）  </p>
+<p>所以你可以在 <code>Server</code> 部分找到复杂的逻辑部分，在 <code>Client</code> 找到动画、侦测相关实现。</p>
+<p>存在 <code>S</code> 与 <code>C</code> 的对应时，会有单独的按钮帮助跳转。</p>
+<p><a href="Codemon/"><strong>Codemon</strong></a></p>
+<p><a href="DCard_Legend/"><strong>DCard:Legend</strong></a></p>
+<p><a href="Parabox/"><strong>Parabox</strong></a></p>
+<h1 id="以下使用旧引擎">以下使用旧引擎<a class="headerlink" href="#以下使用旧引擎" title="Permanent link"></a></h1>
+<p>这部分可能不会进行说明。</p>
+<p>ISOBALL  </p>
+<p>CardWars I  </p>
+<p>Clash of Balls</p>
 
 
 

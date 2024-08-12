@@ -65,6 +65,10 @@ nav:
       - blog/Input Gathering/index.md
       - blog/Frame Skipping/index.md
       - blog/Event Attached/index.md
-      - blog/Channel/index.md
+      - blog/Channels/index.md
+      - blog/Global Datas/index.md
     - Projects:
       - blog/Project Analysis/index.md
+      - blog/Project Analysis/Codemon/index.md
+      - blog/Project Analysis/DCard_Legend/index.md
+      - blog/Project Analysis/Parabox/index.md
