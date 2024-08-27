@@ -1,5 +1,11 @@
 # Basical Naming Rules
 
+这大概是给我看的。
+
+你有意见，我没有。
+
+没有意见才用这些。
+
 ## 基础部分
 
 驼峰式: 大部分变量。
@@ -59,6 +65,66 @@
 前缀 `u-`、`w-`、`z-`: 用于常用函数更易获取。点击函数后的首个拓展(一般都有至少一个拓展吧?)后向上滑滚轮即可快速索引函数。(用处不大，三者区别未定义)
 
 前缀 `#`: 一般用于引擎中，表示此变量请不要触及。一般无作用域，直接用小写(可带省略)+下划线或横线(单词间，强制)。
+
+## 函数
+
+### 枚举量
+
+#### 注释型写法
+
+在函数结尾使用`// 解释` 或 参数后使用 `/* 解释 */`。（如果你习惯 `Python` 等语言的其他注释写法，也可以使用）  
+
+另外，单独在函数中第一行，使用注释块进行分行解释显然更美观，但可能稍显冗长。
+
+#### 变量选值写法
+
+与基础部分相似。仅在此处参数名不会过长（约20字符）时使用。
+
+例如：`0=effect/1=card` 作参数名。
+
+仅 `0/1` 时请使用布尔。
+
+### 可选参数
+
+这些函数应该标明可选的参数，以及如何选参。注意，这里并不包含可以填什么。
+
+函数写法：  
+`函数名 参数1 参数2 .. 参数n [表达式] [选参1] [选参2] ... [选参n]`
+
+表达式的写法可以较为自由，你可以写让人能显而易见看懂的布尔表达式，也可以写较为复杂的正则表达式。  
+当然，你也可以写中文。
+
+**注意：表达式为空时恒成立。**
+
+### 部分选参
+
+举例函数 `findNext`，假如有 `当前now` `强制位置forcedNext` `强制坐标forcedNextPos`。
+
+举三种情况。
+
+若已知 `now` 必填，`forcedNext` 和 `forcedNextPos` 存在至少一个时可以正常执行函数。
+
+此时函数的写法为：
+`findNext now [forcedNext|forcedNextPos] [forcedNext] [forcedNextPos]`
+
+若已知 `now` 必填，`forcedNext` 和 `forcedNextPos` 存在恰好一个时可以正常执行函数。
+
+此时函数的写法为：
+`findNext now [forcedNext^forcedNextPos] [forcedNext] [forcedNextPos]`
+
+若已知 `now` 必填，`forcedNext` 和 `forcedNextPos` 存在至多一个时可以正常执行函数。
+
+此时函数的写法为：
+`findNext now [!(forcedNext&forcedNextPos)] [forcedNext] [forcedNextPos]`
+
+### 完全选参
+
+举例函数 `renderABC`，假如有 `高度height` `宽度width` `颜色colour` `编号id` `透明度transparency` `方向direction` 等参数。  
+
+已知存在 `id` 时可以完全执行函数。同时，除 `id` `transparency` 以外同时存在时也可以执行函数。
+
+此时函数的写法为：（我重排了参数，稍显美观）  
+`renderABC [id|(height&weight&colour&direction)] [id] [height] [weight] [colour] [transparency] [direction]`
 
 ## URM部分
 
