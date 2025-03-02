@@ -55,7 +55,11 @@ markdown_extensions:
 nav:
   - index.md
   - Blog:
-    - introduction/index.md
+    - Introduction:
+      - introduction/index.md
+      - introduction/beginning/index.md
+      - introduction/ball/index.md
+      - introduction/face/index.md
     - Engines:
       - blog/index.md
       - blog/Basical Naming Rules/index.md
@@ -72,3 +76,4 @@ nav:
       - blog/Project Analysis/Codemon/index.md
       - blog/Project Analysis/DCard_Legend/index.md
       - blog/Project Analysis/Parabox/index.md
+      - blog/Project Analysis/Card Event Engine/index.md

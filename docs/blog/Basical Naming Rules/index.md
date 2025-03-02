@@ -102,17 +102,17 @@
 
 举三种情况。
 
-若已知 `now` 必填，`forcedNext` 和 `forcedNextPos` 存在至少一个时可以正常执行函数。
+若已知 `now` 必填，`forcedNext` 和 `forcedNextPos` 存在**至少**一个时可以正常执行函数。
 
 此时函数的写法为：
 `findNext now [forcedNext|forcedNextPos] [forcedNext] [forcedNextPos]`
 
-若已知 `now` 必填，`forcedNext` 和 `forcedNextPos` 存在恰好一个时可以正常执行函数。
+若已知 `now` 必填，`forcedNext` 和 `forcedNextPos` 存在**恰好**一个时可以正常执行函数。
 
 此时函数的写法为：
 `findNext now [forcedNext^forcedNextPos] [forcedNext] [forcedNextPos]`
 
-若已知 `now` 必填，`forcedNext` 和 `forcedNextPos` 存在至多一个时可以正常执行函数。
+若已知 `now` 必填，`forcedNext` 和 `forcedNextPos` 存在**至多**一个时可以正常执行函数。
 
 此时函数的写法为：
 `findNext now [!(forcedNext&forcedNextPos)] [forcedNext] [forcedNextPos]`
