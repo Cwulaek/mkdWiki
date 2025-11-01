@@ -1,5 +1,7 @@
 # DCard:Legend
 
+更详细的内容，前往 [CardEventEngine]！
+
 ## Server
 
 ### 初始化 Initials
