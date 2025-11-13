@@ -2,122 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mydomain.org/mysite/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/origin_index/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Basical%20Naming%20Rules/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Black%20Screens/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Channels/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Colorful%20Costumes/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Event%20Attached/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Frame%20Skipping/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Global%20Datas/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Input%20Gathering/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Project%20Analysis/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Project%20Analysis/Card%20Event%20Engine/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Project%20Analysis/Codemon/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Project%20Analysis/DCard_Legend/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/Project%20Analysis/Parabox/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/URM/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/introduction/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/introduction/ball/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/introduction/beginning/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/introduction/cast/</loc>
+         <lastmod>2025-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/introduction/extensions/card/</loc>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/introduction/face/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/introduction/line/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/poem/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/theory/</loc>
-         <lastmod>2025-03-02</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-13</lastmod>
     </url>
 </urlset>

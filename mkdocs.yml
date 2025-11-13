@@ -14,19 +14,22 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - meta
+  - tables
   - toc:
-      permalink: ''
+      permalink: true
+      title: On this Page
       slugify: !!python/name:pymdownx.slugs.uslugify
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
      smart_enable: all
+  - pymdownx.blocks.caption
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      # emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.highlight:
       linenums: true
   - pymdownx.inlinehilite
@@ -46,12 +49,13 @@ markdown_extensions:
           format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
         - name: mermaid
           class: mermaid
+          # format: !!python/name:pymdownx.superfences.fence_code_format
           format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  - pymdownx.tabbed:
-      alternate_style: true
 nav:
   - index.md
   - Blog:

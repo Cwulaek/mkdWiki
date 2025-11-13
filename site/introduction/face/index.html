@@ -17,8 +17,11 @@
         <link rel="next" href="../../blog/">
       
       
+        
+      
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
@@ -26,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
       
       
 
@@ -45,11 +48,10 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -83,12 +85,12 @@
     <a href="../.." title="Scratch works and Scratch works" class="md-header__button md-logo" aria-label="Scratch works and Scratch works" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -108,36 +110,38 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -148,6 +152,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -178,7 +183,7 @@
     <a href="../.." title="Scratch works and Scratch works" class="md-nav__button md-logo" aria-label="Scratch works and Scratch works" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Scratch works and Scratch works
@@ -196,9 +201,16 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Welcome to My Website
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -218,6 +230,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -228,9 +241,16 @@
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Blog
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -239,7 +259,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Blog
+            
+  
+    Blog
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -251,6 +275,7 @@
   
   
   
+    
     
     
     
@@ -265,9 +290,16 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -276,7 +308,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            Introduction
+            
+  
+    Introduction
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -290,9 +326,16 @@
       <a href="../" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     个人介绍
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -311,9 +354,16 @@
       <a href="../beginning/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     序
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -332,9 +382,16 @@
       <a href="../ball/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     球
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -362,9 +419,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     面
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -373,16 +437,25 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     面
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this Page">
   
   
   
@@ -391,14 +464,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this Page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#我们的脸我的我们他们的所见" class="md-nav__link">
     <span class="md-ellipsis">
-      我们的脸，我的我们，他们的所见。
+      
+        我们的脸，我的我们，他们的所见。
+      
     </span>
   </a>
   
@@ -431,6 +506,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -441,9 +517,16 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Engines
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -452,7 +535,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            Engines
+            
+  
+    Engines
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -468,9 +555,16 @@
       <a href="../../blog/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Blog
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -489,9 +583,16 @@
       <a href="../../blog/Basical%20Naming%20Rules/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Basical Naming Rules
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -510,9 +611,16 @@
       <a href="../../blog/Black%20Screens/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Black Screens
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -531,9 +639,16 @@
       <a href="../../blog/URM/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     URM
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -552,9 +667,16 @@
       <a href="../../blog/Colorful%20Costumes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Colorful Costumes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -573,9 +695,16 @@
       <a href="../../blog/Input%20Gathering/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Input Gathering
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -594,9 +723,16 @@
       <a href="../../blog/Frame%20Skipping/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Frame Skipping
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -615,9 +751,16 @@
       <a href="../../blog/Event%20Attached/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Events
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -636,9 +779,16 @@
       <a href="../../blog/Channels/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Channels
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -657,9 +807,16 @@
       <a href="../../blog/Global%20Datas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Global Datas
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -678,9 +835,16 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Archive
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -707,6 +871,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -717,9 +882,16 @@
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Projects
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -728,7 +900,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
-            Projects
+            
+  
+    Projects
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -742,9 +918,16 @@
       <a href="../../blog/Project%20Analysis/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     实际代码案例分析
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -763,9 +946,16 @@
       <a href="../../blog/Project%20Analysis/Codemon/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Codemon
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -784,9 +974,16 @@
       <a href="../../blog/Project%20Analysis/DCard_Legend/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     DCard:Legend
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -805,9 +1002,16 @@
       <a href="../../blog/Project%20Analysis/Parabox/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Parabox
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -826,9 +1030,16 @@
       <a href="../../blog/Project%20Analysis/Card%20Event%20Engine/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     卡事之擎
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -865,7 +1076,9 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this Page">
   
   
   
@@ -874,14 +1087,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this Page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#我们的脸我的我们他们的所见" class="md-nav__link">
     <span class="md-ellipsis">
-      我们的脸，我的我们，他们的所见。
+      
+        我们的脸，我的我们，他们的所见。
+      
     </span>
   </a>
   
@@ -897,16 +1112,48 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
-<h1 id="面">面<a class="headerlink" href="#面" title="Permanent link"></a></h1>
-<h5 id="我们的脸我的我们他们的所见">我们的脸，我的我们，他们的所见。<a class="headerlink" href="#我们的脸我的我们他们的所见" title="Permanent link"></a></h5>
+
+<h1 id="面">面<a class="headerlink" href="#面" title="Permanent link">&para;</a></h1>
+<h5 id="我们的脸我的我们他们的所见">我们的脸，我的我们，他们的所见。<a class="headerlink" href="#我们的脸我的我们他们的所见" title="Permanent link">&para;</a></h5>
 <hr />
 <p>宇宙是面，世界是体，这些是二和三。</p>
-<p>什么是四？我不知道。</p>
+<p>什么是四？我不知道，直到五棋。</p>
+<p>以线表示面，以新线表示树。<br />
+树是线的立方，树在新面中。<br />
+这是我的构思。</p>
+<p>大火，中精。当时使用画布，初生之勇。</p>
+<p>话回前言。卡战之为回归时首作，其时策多，可无能为力使其不进。</p>
+<p>初生之勇使我研究语言机理，毁卡战由此而致。</p>
+<p>面是球之展开。后月，我作球，球之进洞。</p>
+<p>初次伪立方就成功，我使用我们的能力增强。</p>
+<p>以号表块，表示块的面。<br />
+记载方向和距离，增加受力。<br />
+大火，中精。</p>
+<p>此时我们已上千，甩人以万里。</p>
+<p>图章已为我所熟，URM构建渐渐形成。</p>
+<p>URM又为更渲控。</p>
+<p>更师更新，渲师渲染，控师运算。</p>
+<p>当时无控但有广，由线程而引入。<br />
+事之不知，之之运算于更，慢而繁。</p>
+<p>当时又少封装。间于球余，魔方出，其六面。</p>
+<p>夫其，不全转而劣，自动而有优。时五棋与六面封装略，球则少。</p>
+<p>然面中有线，线现为象，后文矣。</p>
+<p>皆知台为面，却我不解。众好美而独陋不止一时，常劣我者仍优以美。</p>
+<p>台跳社区皆易火，更易制。三之大作沉极速，台跳后，唯美而精者久。</p>
+<p>三服。</p>
+<p>三技疏，多尝试新坑，而未填又十。有台跳形地城我世，有暮森于皇家守军，有火红口妖，有音线传说之下及三符文。</p>
+<p>当时我们是面，面共一线，合为UR而无M。</p>
+<p>面有线而无点。</p>
+<p>我们一心不二用，专而不可扩，易之则为误。总有半年，多困于不知所写。我们要繁，我要全：</p>
+<p>一止于UR，二止于效，三止于我。</p>
+<p>中考后，高一半年又疫情网课，多游而无写。及终，念爪哇之事件类，开事件架构，做雏之新口妖，有核心。</p>
+<p>2023寒，真觉醒之年初。</p>
 
 
 
@@ -953,10 +1200,13 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
